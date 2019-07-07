@@ -9,4 +9,5 @@ ft_strlen:
     sub rdi, rsi ; save the string length
     dec rdi      ; don't count the \0 in the string length
     mov rax, rdi ; save the return value
+    ; mov rbx, rdi ; save the return value
     ret

@@ -6,15 +6,15 @@
 #    By: Roger Ndaba <rogerndaba@gmil.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/07 14:30:45 by Roger Ndaba       #+#    #+#              #
-#    Updated: 2019/07/07 14:43:11 by Roger Ndaba      ###   ########.fr        #
+#    Updated: 2019/07/14 14:21:31 by Roger Ndaba      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libfts.a
 
-ASM = ft_strlen.asm
+ASM = ft_strlen.s ft_bzero.s
 
-OBJ = ft_strlen.o
+OBJ = ft_strlen.o ft_bzero.o
 
 CC = gcc
 

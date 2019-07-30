@@ -3,16 +3,15 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_strlen
+global _ft_strlen
 
 section .text
 
-ft_strlen:
+_ft_strlen:
     mov rsi, rdi
     mov al, 0
     repne scasb
     sub rdi, rsi
     dec rdi
     mov rax, rdi
-
     ret

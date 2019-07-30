@@ -5,7 +5,7 @@ if [ "$#" -eq  "0" ]
     echo "No arguments supplied"
 else
     for i in "$@"; do
-        nasm -f elf64 $i.s
+        nasm -f macho64 $i.s
     done
     gcc main.c *.o 
 fi

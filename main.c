@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Roger Ndaba <rogerndaba@gmil.com>          +#+  +:+       +#+        */
+/*   By: Roger Ndaba <rogerndaba@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/07/14 14:20:38 by Roger Ndaba      ###   ########.fr       */
+/*   Updated: 2019/07/30 10:27:33 by Roger Ndaba      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,14 @@
 
 size_t ft_strlen(const char *);
 void ft_bzero(void *s, size_t n);
+char *ft_strcat(char *restrict s1, const char *restrict s2);
 
 void test_ft_strlen() {
     char tmp[5][125] = {"Roger", "\n\tllsjfldfhlsdflhhsdlf\tfgfgfgfg", "", "    ", "-1-2-3-4"};
 
     printf(MAGENTA "ft_strlen test :\n" RESET);
     for (int i = 0; i < 5; i++) {
+        printf("\t%lu -- %lu\n", ft_strlen(tmp[i]), strlen(tmp[i]));
         if (strlen(tmp[i]) == ft_strlen(tmp[i])) {
             printf(BGREEN "\tTest %d: Passed\n" RESET, i);
         } else {
@@ -56,4 +58,8 @@ void test_ft_bzero() {
 
 int main(void) {
     test_ft_strlen();
+char *s1 = "R";
+char *s2 = "oger";
+
+printf("-----> %s\n", ft_strcat(s1, s2));
 }

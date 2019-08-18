@@ -6,11 +6,18 @@
 global ft_strlen
 
 section .text
- ft_strlen:
-    mov rsi, rdi
-    mov al, 0
-    repne scasb
-    sub rdi, rsi
-    dec rdi
-    mov rax, rdi
-    ret
+
+ft_strlen:
+
+	push	rbx
+	push	rcx
+	mov		rbx, rdi
+	xor		al, al
+	mov		rcx, 0xffffffff
+	repne	scasb
+	sub		rdi, rbx
+	mov		rax, rdi
+	sub		rax, 1
+	pop		rcx
+	pop		rbx
+	ret

@@ -6,7 +6,7 @@
 /*   By: Roger Ndaba <rogerndaba@gmil.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/18 17:54:04 by Roger Ndaba      ###   ########.fr       */
+/*   Updated: 2019/08/18 19:04:35 by Roger Ndaba      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,6 @@ printf("isalnum ---> %d\n", ft_isalnum('`'));
 printf("isascii ---> %d\n", ft_isascii(0));
 printf("isprint ---> %d\n", ft_isprint('\0'));
 printf("istoupper ---> %c\n", ft_toupper('A'));
-ft_puts("Roger");
+ft_puts(NULL);
 printf("istolower ---> %c\n", ft_tolower('a'));
 }

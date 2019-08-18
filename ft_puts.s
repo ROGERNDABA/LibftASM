@@ -7,24 +7,28 @@ global ft_puts
 
 extern	ft_strlen
 
+section .data
+	STDOUT equ 1
+	SYS_WRITE equ 1
+	NEW_LINE db 0xa
+
 section .text
 
 ft_puts:
-	mov rcx, rdi
-	call ft_strlen
-	mov rdi, 1
-	mov rdx, rax
-	mov rax, 0x2000004
-	mov rsi, rcx
+	cmp		rdi, 0
+	je		end
+	push	rdi
+	call	ft_strlen
+	mov		rdi, STDOUT
+	pop		rsi
+	mov		rdx, rax
+	mov		rax, SYS_WRITE
 	syscall
-
-	mov rdx, 1
-	mov rax, 0x2000004
-	lea rsi, [rel newline]
+	mov		rax, SYS_WRITE
+	mov		rdi, STDOUT
+	mov		rsi, NEW_LINE
+	mov		rdx, 1
 	syscall
 
 end:
 	ret
-
-section .data
-newline db 0x0a

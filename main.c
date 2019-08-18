@@ -6,7 +6,7 @@
 /*   By: Roger Ndaba <rogerndaba@gmil.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/18 15:28:01 by Roger Ndaba      ###   ########.fr       */
+/*   Updated: 2019/08/18 16:16:51 by Roger Ndaba      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 size_t ft_strlen(const char *);
 void ft_bzero(void *s, size_t n);
 char *ft_strcat(char *restrict s1, const char *restrict s2);
+int  ft_isalpha(int c);
 
 void test_ft_strlen() {
     char tmp[5][125] = {"Roger", "\n\tllsjfldfhlsdflhhsdlf\tfgfgfgfg", "", "    ", "-1-2-3-4"};
@@ -61,5 +62,6 @@ int main(void) {
 char s1[] = "R";
 char s2[] = "oger";
 
-printf("-----> %s\n", ft_strcat(s1, s2));
+printf("strcat ---> %s\n", ft_strcat(s1, s2));
+printf("isalpha ---> %d\n", ft_isalpha(65));
 }

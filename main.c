@@ -6,7 +6,7 @@
 /*   By: Roger Ndaba <rogerndaba@gmil.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/18 16:28:20 by Roger Ndaba      ###   ########.fr       */
+/*   Updated: 2019/08/18 16:50:09 by Roger Ndaba      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char s1[] = "R";
 char s2[] = "oger";
 
 printf("strcat ---> %s\n", ft_strcat(s1, s2));
-printf("isalpha ---> %d\n", ft_isalpha(65));
-printf("isdigit ---> %d\n", ft_isdigit(58));
-printf("isalnum ---> %d\n", ft_isdigit('R'));
+printf("isalpha ---> %d\n", ft_isalpha('z'));
+printf("isdigit ---> %d\n", ft_isdigit('y'));
+printf("isalnum ---> %d\n", ft_isalnum('`'));
 }

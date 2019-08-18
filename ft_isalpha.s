@@ -12,23 +12,25 @@ ft_isalpha:
 	jg		upper_check
 	cmp		rdi, 0x60
 	jg		lower_check
-	jmp		end
+	mov		rax, 0x0
+	ret
+
 
 upper_check:
-	cmp		rdi, 0x5B
+	cmp		rdi, 0x5b
 	jl		is_alpha
-	jmp		end
+	cmp		rdi, 0x60
+	jg		lower_check
+	mov		rax, 0x0
+	ret
 
 
 lower_check:
-	cmp		rdi, 0x7B
+	cmp		rdi, 0x7b
 	jl		is_alpha
-	jmp		end
+	mov		rax, 0x0
+	ret
 
 is_alpha:
 	mov		rax, 0x1
-	ret
-
-end:
-	mov		rax, 0x0
 	ret

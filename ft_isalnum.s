@@ -10,5 +10,15 @@ extern	ft_isalpha
 
 
 ft_isalnum:
-	call ft_isalpha
-	call ft_isdigit
+	call	ft_isdigit
+	cmp		rax, 0x1
+	je		end
+	call	ft_isalpha
+	cmp		rax, 0x1
+	je		end
+	mov		rax, 0x0
+	ret
+
+end:
+	ret
+

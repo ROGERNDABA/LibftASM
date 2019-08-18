@@ -1,27 +1,28 @@
 ;----------------------------;
-; ft_memset.s
+; ft_memcpy.s
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_memset
+global ft_memcpy
 
 section .text
 
-ft_memset:
+ft_memcpy:
 	push	rbp
 	mov		rbp, rsp
-	mov		rbx, rdi
+	mov		r10, rdi
 	mov		rcx, rdx
 	cmp		rcx, 0
 	jle		end
-	cmp		rdi, 0
+	cmp		r10, 0
 	je		end
-	mov		rax, rsi
+	cmp		rsi, 0
+	je		end
 	cld
-	rep		stosb
+	rep		movsb
 
 end:
-	mov		rax, rbx
+	mov		rax, r10
 	mov		rsp, rbp
 	pop		rbp
 	ret

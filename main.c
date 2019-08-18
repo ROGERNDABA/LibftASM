@@ -6,7 +6,7 @@
 /*   By: Roger Ndaba <rogerndaba@gmil.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/18 19:24:27 by Roger Ndaba      ###   ########.fr       */
+/*   Updated: 2019/08/18 20:18:45 by Roger Ndaba      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int  ft_toupper(int c);
 int  ft_tolower(int c);
 int  ft_puts(const char *s);
 void *ft_memset(void *s, int c, size_t n);
+void *ft_memcpy(void *dest, const void *src, size_t n);
 
 void test_ft_strlen() {
     char tmp[5][125] = {"Roger", "\n\tllsjfldfhlsdflhhsdlf\tfgfgfgfg", "", "    ", "-1-2-3-4"};
@@ -68,7 +69,7 @@ void test_ft_bzero() {
 int main(void) {
     test_ft_strlen();
 char s1[] = "R";
-char s2[] = "oger";
+char s2[] = "zzzzzzzzz";
 
 printf("strcat ---> %s\n", ft_strcat(s1, s2));
 printf("isalpha ---> %d\n", ft_isalpha('z'));
@@ -79,5 +80,6 @@ printf("isprint ---> %d\n", ft_isprint('\0'));
 printf("istoupper ---> %c\n", ft_toupper('A'));
 ft_puts(NULL);
 printf("istolower ---> %c\n", ft_tolower('a'));
-printf("memset ---> %s\n", (char *)ft_memset(s2, 'p', 4));
+printf("memcpy ---> %s\n", (char *)ft_memcpy(s1, s2, 2));
+printf("memset ---> %s\n", (char *)ft_memset(s2, 'p', 2));
 }

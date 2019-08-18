@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Roger Ndaba <rogerndaba@gmail.com>         +#+  +:+       +#+        */
+/*   By: Roger Ndaba <rogerndaba@gmil.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/07/30 10:27:33 by Roger Ndaba      ###   ########.fr       */
+/*   Updated: 2019/08/18 15:28:01 by Roger Ndaba      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,8 @@ void test_ft_bzero() {
 
 int main(void) {
     test_ft_strlen();
-char *s1 = "R";
-char *s2 = "oger";
+char s1[] = "R";
+char s2[] = "oger";
 
 printf("-----> %s\n", ft_strcat(s1, s2));
 }

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ "$#" -eq  "0" ] 
+if [ "$#" -eq  "0" ]
     then
     echo "No arguments supplied"
 else
     for i in "$@"; do
-        nasm -f macho64 $i.s
+        nasm -felf64 $i.s
     done
-    gcc main.c *.o 
+    gcc -m64 main.c *.o
 fi

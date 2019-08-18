@@ -6,7 +6,7 @@
 /*   By: Roger Ndaba <rogerndaba@gmil.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/18 17:02:50 by Roger Ndaba      ###   ########.fr       */
+/*   Updated: 2019/08/18 17:25:39 by Roger Ndaba      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int  ft_isalpha(int c);
 int  ft_isdigit(int c);
 int  ft_isalnum(int c);
 int  ft_isascii(int c);
+int  ft_isprint(int c);
 
 void test_ft_strlen() {
     char tmp[5][125] = {"Roger", "\n\tllsjfldfhlsdflhhsdlf\tfgfgfgfg", "", "    ", "-1-2-3-4"};
@@ -70,4 +71,5 @@ printf("isalpha ---> %d\n", ft_isalpha('z'));
 printf("isdigit ---> %d\n", ft_isdigit('y'));
 printf("isalnum ---> %d\n", ft_isalnum('`'));
 printf("isascii ---> %d\n", ft_isascii(0));
+printf("isprint ---> %d\n", ft_isprint(127));
 }

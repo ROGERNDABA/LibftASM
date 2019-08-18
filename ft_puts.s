@@ -8,9 +8,9 @@ global ft_puts
 extern	ft_strlen
 
 section .data
-	STDOUT equ 1
-	SYS_WRITE equ 1
-	NEW_LINE db 0xa
+	stdout equ 1
+	sys_write equ 1
+	newline db 0xa
 
 section .text
 
@@ -19,14 +19,14 @@ ft_puts:
 	je		end
 	push	rdi
 	call	ft_strlen
-	mov		rdi, STDOUT
+	mov		rdi, stdout
 	pop		rsi
 	mov		rdx, rax
-	mov		rax, SYS_WRITE
+	mov		rax, sys_write
 	syscall
-	mov		rax, SYS_WRITE
-	mov		rdi, STDOUT
-	mov		rsi, NEW_LINE
+	mov		rax, sys_write
+	mov		rdi, stdout
+	mov		rsi, newline
 	mov		rdx, 1
 	syscall
 

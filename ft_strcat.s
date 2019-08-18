@@ -5,6 +5,8 @@
 
 global ft_strcat
 
+section .text
+
 ft_strcat:
 	push	rbp
 	mov		rbp, rsp
@@ -13,21 +15,21 @@ ft_strcat:
 
 cat_loop:
 	cmp		byte[rdi], 0
-	je  copy
-	inc rdi
-	jmp cat_loop
+	je		copy
+	inc		rdi
+	jmp		cat_loop
 
 copy:
-	mov ah, [rsi]
-	mov [rdi], ah
-	inc rdi
-	inc rsi
-	cmp ah, 0
-	jg copy
+	mov		ah, [rsi]
+	mov		[rdi], ah
+	inc		rdi
+	inc		rsi
+	cmp		ah, 0
+	jg		copy
 end:
-	pop rsi
-	pop rdi
-	mov rsp, rbp
-	pop rbp
-	mov rax, rdi
+	pop		rsi
+	pop		rdi
+	mov		rsp, rbp
+	pop		rbp
+	mov		rax, rdi
 	ret

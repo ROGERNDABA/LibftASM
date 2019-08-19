@@ -3,11 +3,11 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_strlen
+global _ft_strlen
 
 section .text
 
-ft_strlen:
+_ft_strlen:
 
 	push	rbx
 	push	rcx

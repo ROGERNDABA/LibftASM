@@ -3,11 +3,11 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_memcpy
+global _ft_memcpy
 
 section .text
 
-ft_memcpy:
+_ft_memcpy:
 	push	rbp
 	mov		rbp, rsp
 	mov		r10, rdi

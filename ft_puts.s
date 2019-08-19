@@ -3,32 +3,40 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_puts
+global _ft_puts
 
-extern	ft_strlen
+extern _ft_strlen
 
 section .data
-	stdout equ 1
-	sys_write equ 1
 	newline db 0xa
+	msg: db "(null)", 0xa
+	.len: equ $ - msg
 
 section .text
 
-ft_puts:
-	cmp		rdi, 0
+_ft_puts:
+	cmp		rdi, 0x0
 	je		end
 	push	rdi
-	call	ft_strlen
-	mov		rdi, stdout
+	call	_ft_strlen
+	mov		rdi, 0x1
 	pop		rsi
 	mov		rdx, rax
-	mov		rax, sys_write
+	mov		rax, 0x2000004
 	syscall
-	mov		rax, sys_write
-	mov		rdi, stdout
-	mov		rsi, newline
-	mov		rdx, 1
+	mov		rax, 0x2000004
+	mov		rdi, 0x1
+	lea		rsi, [rel newline]
+	mov		rdx, 0x1
 	syscall
+	ret
 
 end:
+	mov     rax, 0x2000004
+	push rdi
+    mov     rdi, 1 ; stdout
+    lea     rsi, [rel msg]
+    mov     rdx, msg.len
+    syscall
+	pop rdi
 	ret

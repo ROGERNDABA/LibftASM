@@ -3,11 +3,11 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_isascii
+global _ft_isascii
 
 section .text
 
-ft_isascii:
+_ft_isascii:
 	cmp		rdi, 0x0
 	jge		isascii
 	mov		rax, 0x0

@@ -3,11 +3,11 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_isalpha
+global _ft_isalpha
 
 section .text
 
-ft_isalpha:
+_ft_isalpha:
 	cmp		rdi, 0x40
 	jg		upper_check
 	cmp		rdi, 0x60

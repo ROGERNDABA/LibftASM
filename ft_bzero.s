@@ -3,16 +3,17 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_bzero
+global _ft_bzero
 
 section .text
- ft_bzero:
+
+_ft_bzero:
 	cmp rsi, 0
 	je end
 	mov byte[rdi], 0
 	inc rdi
 	dec rsi
-	jmp ft_bzero
+	jmp _ft_bzero
 
 end:
 	ret

@@ -3,11 +3,11 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_isprint
+global _ft_isprint
 
 section .text
 
-ft_isprint:
+_ft_isprint:
 	cmp		rdi, 0x20
 	jl		non_printable
 	cmp		rdi, 0x7E

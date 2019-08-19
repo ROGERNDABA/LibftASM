@@ -3,11 +3,11 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_memset
+global _ft_memset
 
 section .text
 
-ft_memset:
+_ft_memset:
 	push	rbp
 	mov		rbp, rsp
 	mov		rbx, rdi

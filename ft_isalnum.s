@@ -3,18 +3,18 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_isalnum
+global _ft_isalnum
 
-extern	ft_isdigit
-extern	ft_isalpha
+extern _ft_isdigit
+extern _ft_isalpha
 
 section	.text
 
-ft_isalnum:
-	call	ft_isdigit
+_ft_isalnum:
+	call	_ft_isdigit
 	cmp		rax, 0x1
 	je		end
-	call	ft_isalpha
+	call	_ft_isalpha
 	cmp		rax, 0x1
 	je		end
 	mov		rax, 0x0

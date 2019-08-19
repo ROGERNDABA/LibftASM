@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Roger Ndaba <rogerndaba@gmil.com>          +#+  +:+       +#+        */
+/*   By: Roger Ndaba <rogerndaba@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/18 20:18:45 by Roger Ndaba      ###   ########.fr       */
+/*   Updated: 2019/08/19 11:06:52 by Roger Ndaba      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int  ft_tolower(int c);
 int  ft_puts(const char *s);
 void *ft_memset(void *s, int c, size_t n);
 void *ft_memcpy(void *dest, const void *src, size_t n);
-
+char *ft_strdup(const char *s1);
 void test_ft_strlen() {
     char tmp[5][125] = {"Roger", "\n\tllsjfldfhlsdflhhsdlf\tfgfgfgfg", "", "    ", "-1-2-3-4"};
 
@@ -78,7 +78,12 @@ printf("isalnum ---> %d\n", ft_isalnum('`'));
 printf("isascii ---> %d\n", ft_isascii(0));
 printf("isprint ---> %d\n", ft_isprint('\0'));
 printf("istoupper ---> %c\n", ft_toupper('A'));
-ft_puts(NULL);
+
+char *u = NULL;
+ft_puts("\033[31mHello darkness my old friend\033[0m");
+
+u = ft_strdup(s2);
+printf("strdup ---> %s\n", u);
 printf("istolower ---> %c\n", ft_tolower('a'));
 printf("memcpy ---> %s\n", (char *)ft_memcpy(s1, s2, 2));
 printf("memset ---> %s\n", (char *)ft_memset(s2, 'p', 2));

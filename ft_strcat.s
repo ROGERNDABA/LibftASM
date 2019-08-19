@@ -3,11 +3,11 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_strcat
+global _ft_strcat
 
 section .text
 
-ft_strcat:
+_ft_strcat:
 	push	rbp
 	mov		rbp, rsp
 	push	rdi

@@ -3,14 +3,14 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_toupper
+global _ft_toupper
 
-extern	ft_isalpha
+extern _ft_isalpha
 
 section .text
 
-ft_toupper:
-	call	ft_isalpha
+_ft_toupper:
+	call	_ft_isalpha
 	cmp		rax, 0x1
 	je		change_case
 	mov		rax, rdi

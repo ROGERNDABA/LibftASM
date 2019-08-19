@@ -3,11 +3,11 @@
 ; Created By : Roger Ndaba
 ;----------------------------;
 
-global ft_isdigit
+global _ft_isdigit
 
 section .text
 
-ft_isdigit:
+_ft_isdigit:
 	cmp		rdi, 0x2F
 	jg		digit_check
 	jmp		end

@@ -21,7 +21,7 @@ read_file:
 	mov		rdi, r8
 	lea		rsi, [rel buff]
 	mov		rdx, MAXLINE
-	mov		rax, 0x2000003
+	mov		rax, SYS_READ
 	syscall
 	jc		end
 
@@ -34,7 +34,7 @@ read_file:
 	lea		rdi, [rsi]
 	mov		rdi, STDOUT
 	mov		rdx, r10
-	mov		rax, 0x2000004
+	mov		rax, SYS_WRITE
 	syscall
 
 	cmp		r10, 0

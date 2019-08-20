@@ -6,7 +6,7 @@
 #    By: Roger Ndaba <rogerndaba@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/07 14:30:45 by Roger Ndaba       #+#    #+#              #
-#    Updated: 2019/08/20 10:26:01 by Roger Ndaba      ###   ########.fr        #
+#    Updated: 2019/08/20 12:04:30 by Roger Ndaba      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,4 +73,4 @@ obj/%.o: srcs/%.s obj
 	@printf " \e[48;5;201m\e[40m  \e[32m✔  \e[0m \e[1;33m|\e[0m  "
 	$(BUILD)
 
-.PHONY: all, clean, fclean, re obj
+.PHONY: all, clean, fclean, re

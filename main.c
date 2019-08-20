@@ -6,13 +6,15 @@
 /*   By: Roger Ndaba <rogerndaba@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/19 11:06:52 by Roger Ndaba      ###   ########.fr       */
+/*   Updated: 2019/08/20 12:00:41 by Roger Ndaba      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 #define RED "\033[0;31m"
 #define BRED "\033[1;31m"
@@ -42,6 +44,8 @@ int  ft_puts(const char *s);
 void *ft_memset(void *s, int c, size_t n);
 void *ft_memcpy(void *dest, const void *src, size_t n);
 char *ft_strdup(const char *s1);
+void ft_cat(int fd);
+
 void test_ft_strlen() {
     char tmp[5][125] = {"Roger", "\n\tllsjfldfhlsdflhhsdlf\tfgfgfgfg", "", "    ", "-1-2-3-4"};
 
@@ -87,4 +91,9 @@ printf("strdup ---> %s\n", u);
 printf("istolower ---> %c\n", ft_tolower('a'));
 printf("memcpy ---> %s\n", (char *)ft_memcpy(s1, s2, 2));
 printf("memset ---> %s\n", (char *)ft_memset(s2, 'p', 2));
+
+int fd = open("test.txt", O_RDONLY);
+ft_cat(fd);
+close(fd);
+
 }

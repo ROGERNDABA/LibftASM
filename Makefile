@@ -6,38 +6,49 @@
 #    By: Roger Ndaba <rogerndaba@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/07 14:30:45 by Roger Ndaba       #+#    #+#              #
-#    Updated: 2019/08/19 11:13:44 by Roger Ndaba      ###   ########.fr        #
+#    Updated: 2019/08/20 10:13:33 by Roger Ndaba      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libfts.a
 
-ASM = ft_strlen.s ft_bzero.s ft_strcat.s ft_isalpha.s ft_isdigit.s ft_puts.s\
-		ft_isalnum.s ft_isascii.s ft_isprint.s ft_toupper.s ft_tolower.s \
-		ft_memset.s ft_memcpy.s ft_strdup.s ft_cat.s
-
-OBJ = ft_strlen.o ft_bzero.o ft_strcat.o ft_isalpha.o ft_isdigit.o ft_puts.o\
-		ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o \
-		ft_memset.o ft_memcpy.o ft_strdup.o ft_cat.o
-
-CC = gcc
-
 CC_NASM = nasm
 
 FLAGS_NASM = -fmacho64
 
+ASM_FILES = ft_strlen.s ft_bzero.s ft_strcat.s ft_isalpha.s ft_isdigit.s ft_puts.s\
+		ft_isalnum.s ft_isascii.s ft_isprint.s ft_toupper.s ft_tolower.s \
+		ft_memset.s ft_memcpy.s ft_strdup.s ft_cat.s
+
+SRC = $(addprefix srcs/, $(ASM_FILES))
+
+OBJ = 	$(addprefix obj/, $(ASM_FILES:.s=.o))
 
 all: $(NAME)
 
-$(NAME):
-	$(CC_NASM) $(FLAGS_NASM) $(ASM)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+$(NAME): $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@printf "\n\e[1;33m----------------------------------------\n\e[0m"
+	@printf "\n🌸 \e[1;32m [ ✔ ] Libft library made\n\e[0m\n"
 
 clean:
-	rm -fr $(OBJ)
+	@rm -rf obj
+	@printf "\n🌸 \e[1;31m [ ✔ ] Object files removed\n\e[0m\n"
 
-fclean : clean
-	rm -fr $(NAME)
+fclean: clean
+	@rm -rf $(NAME)
+	@printf "🌸 \e[1;33m [ ✔ ] libft library removed\n\e[0m\n"
 
 re: fclean all
+
+obj:
+	@mkdir obj/
+
+obj/%.o: srcs/%.s obj
+	@printf "\n\e[1;33m----------------------------------------\n|"
+	@$(CC_NASM) $(FLAGS_NASM) $< -o $@
+	@printf "\e[38;5;57m %-28s \e[1;33m|\e[0m" $<
+	@printf " \e[48;5;201m\e[40m  \e[32m✔  \e[0m \e[1;33m|\e[0m  "
+	$(BUILD)
+.PHONY: all, clean, fclean, re

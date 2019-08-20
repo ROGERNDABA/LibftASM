@@ -7,5 +7,5 @@ else
     for i in "$@"; do
         nasm -fmacho64 $i.s
     done
-    gcc  main.c srcs/*.o
+    gcc object_t.c main.c srcs/*.o
 fi

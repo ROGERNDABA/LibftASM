@@ -6,7 +6,7 @@
 /*   By: Roger Ndaba <rogerndaba@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/20 16:24:59 by Roger Ndaba      ###   ########.fr       */
+/*   Updated: 2019/08/20 16:25:48 by Roger Ndaba      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,36 +70,4 @@ int main(void) {
     test_ft_strlen();
     test_ft_bzero();
     test_ft_memcpy();
-
-//     char str1[] = "Geeks";
-//   char str2[] = "";
-
-//     memcpy(str1, str2, sizeof(str2));
-
-//     printf("==%d\n", memcmp(str2, "", sizeof(str1)));
-
-// char s1[] = "R";
-// char s2[] = "zzzzzzzzz";
-
-// printf("strcat ---> %s\n", ft_strcat(s1, s2));
-// printf("isalpha ---> %d\n", ft_isalpha('z'));
-// printf("isdigit ---> %d\n", ft_isdigit('y'));
-// printf("isalnum ---> %d\n", ft_isalnum('`'));
-// printf("isascii ---> %d\n", ft_isascii(0));
-// printf("isprint ---> %d\n", ft_isprint('\0'));
-// printf("istoupper ---> %c\n", ft_toupper('A'));
-
-// char *u = NULL;
-// ft_puts("\033[31mHello darkness my old friend\033[0m");
-
-// u = ft_strdup(s2);
-// printf("strdup ---> %s\n", u);
-// printf("istolower ---> %c\n", ft_tolower('a'));
-// printf("memcpy ---> %s\n", (char *)ft_memcpy(s1, s2, 2));
-// printf("memset ---> %s\n", (char *)ft_memset(s2, 'p', 2));
-
-// int fd = open("test.txt", O_RDONLY);
-// ft_cat(fd);
-// close(fd);
-
 }

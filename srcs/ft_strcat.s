@@ -15,7 +15,7 @@ _ft_strcat:
 
 cat_loop:
 	cmp		byte[rdi], 0
-	jz		copy
+	je		copy
 	inc		rdi
 	jmp		cat_loop
 
@@ -25,7 +25,7 @@ copy:
 	inc		rdi
 	inc		rsi
 	cmp		ah, 0
-	jne		copy
+	jg		copy
 end:
 	pop		rsi
 	pop		rdi

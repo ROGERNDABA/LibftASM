@@ -32,6 +32,7 @@ _ft_puts:
 	lea		rsi, [rel newline]
 	mov		rdx, 0x1
 	syscall
+	mov		rax, 0x1
 	ret
 
 end:
@@ -41,5 +42,6 @@ end:
     lea     rsi, [rel msg]
     mov     rdx, msg.len
     syscall
+	mov		rax, 0x1
 	pop rdi
 	ret

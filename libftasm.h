@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftasm.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Roger Ndaba <rogerndaba@gmail.com>         +#+  +:+       +#+        */
+/*   By: rmdaba <rogerndaba@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 12:14:45 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/20 13:17:37 by Roger Ndaba      ###   ########.fr       */
+/*   Updated: 2019/08/23 14:23:47 by rmdaba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <string.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <ctype.h>
 
 #define RED "\033[0;31m"
 #define BRED "\033[1;31m"

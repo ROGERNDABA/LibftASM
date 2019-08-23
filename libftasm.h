@@ -6,7 +6,7 @@
 /*   By: rmdaba <rogerndaba@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 12:14:45 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/23 14:23:47 by rmdaba           ###   ########.fr       */
+/*   Updated: 2019/08/23 15:23:52 by rmdaba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,7 @@ void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	*ft_strdup(const char *s1);
 void	ft_cat(int fd);
+
+int		ft_atoi(char *s);
 
 #endif //LIBFTASM_H

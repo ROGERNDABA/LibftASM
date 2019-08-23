@@ -6,7 +6,7 @@
 /*   By: rmdaba <rogerndaba@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/23 15:09:36 by rmdaba           ###   ########.fr       */
+/*   Updated: 2019/08/23 15:27:00 by rmdaba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,4 +180,6 @@ int main(void) {
     test_ft_is();
     test_ft_to();
     test_ft_puts();
+
+    printf("------->%d\n", ft_atoi("4"));
 }

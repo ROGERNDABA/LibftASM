@@ -9,22 +9,23 @@ global	_ft_numlen
 section .text
 
 _ft_numlen:
-		mov rax, rdi
-		mov rbx, 10
-		mov rcx, 0
-		cmp	rax, 0
-		jl	negs
-		jmp		jpl
+    mov rbx, 123
+    xor rdi, rdi
 
-negs:
-	imul	rax, -1
-	inc		rcx
-	jmp		jpl
+.loop:
+    mov rcx, rax                    ; save original number
 
-jpl:
-		idiv rbx
-		inc rcx
-		test rax, rax
-		jne jpl
-		mov rax, rcx
-		ret
+    mul rbx                         ; divide by 10 using agner fog's 'magic number'
+    shr rdx, 3                      ;
+
+    mov rax, rdx                    ; store quotient for next loop
+
+    lea rdx, [rdx*4 + rdx]          ; multiply by 10
+    shl rdi, 8                      ; make room for byte
+    lea rdx, [rdx*2 - '0']          ; finish *10 and convert to ascii
+    sub rcx, rdx                    ; subtract from original number to get remainder
+
+    lea rdi, [rdi + rcx]            ; store next byte
+
+    test rax, rax
+    jnz .loop

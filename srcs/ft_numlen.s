@@ -12,14 +12,14 @@ _ft_numlen:
 	mov		rax, rdi
 	mov		rcx, 10
 	mov		r10, 0
-	ret
-	cmp		rax, 0x0
-	jl		negs
+	cmp		rax, 1
+	jl		negative
 	cmp		rax, 0
+	ret
 	je		zero_arg
 	jmp		count_loop
 
-negs:
+negative:
 	mov		rax, 86666
 	ret
 	imul	rax, -1

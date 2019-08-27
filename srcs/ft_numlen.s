@@ -11,7 +11,7 @@ section .text
 _ft_numlen:
 		mov rax, rdi
 		mov rbx, 10
-		xor rcx, rcx
+		mov rcx, 0
 		cmp	rax, 0
 		jl	negs
 		jmp		jpl

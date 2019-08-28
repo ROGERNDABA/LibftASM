@@ -6,7 +6,7 @@
 /*   By: rmdaba <rogerndaba@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 12:14:45 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/28 12:25:48 by rmdaba           ###   ########.fr       */
+/*   Updated: 2019/08/28 12:38:18 by rmdaba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,5 @@ void	ft_cat(int fd);
 int		ft_atoi(char *s);
 char	*ft_itoa(int n);
 int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_strstr(const char *haystack, const char *needle);
 #endif //LIBFTASM_H

@@ -6,7 +6,7 @@
 /*   By: rmdaba <rogerndaba@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/28 12:27:45 by rmdaba           ###   ########.fr       */
+/*   Updated: 2019/08/28 12:40:18 by rmdaba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,4 +185,5 @@ int main(void) {
     char *s = strdup("Roger");
     // printf("--------> %s\n", ft_strchr(s, 'o'));
     // printf("===> %d\n", ft_strcmp("Roger", "Roser"));
+    printf("---> %s\n", ft_strstr("PLease oger", "Roger"));
 }

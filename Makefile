@@ -6,7 +6,7 @@
 #    By: rmdaba <rogerndaba@gmail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/07 14:30:45 by Roger Ndaba       #+#    #+#              #
-#    Updated: 2019/08/28 12:24:37 by rmdaba           ###   ########.fr        #
+#    Updated: 2019/08/28 12:35:41 by rmdaba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ FLAGS_NASM = -fmacho64
 ASM_FILES = ft_strlen.s ft_bzero.s ft_strcat.s ft_isalpha.s ft_isdigit.s ft_puts.s\
 		ft_isalnum.s ft_isascii.s ft_isprint.s ft_toupper.s ft_tolower.s \
 		ft_memset.s ft_memcpy.s ft_strdup.s ft_cat.s ft_atoi.s ft_strchr.s \
-		ft_strcmp.s
+		ft_strcmp.s ft_strstr.s
 
 SRC = $(addprefix srcs/, $(ASM_FILES))
 

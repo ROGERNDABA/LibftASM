@@ -6,7 +6,7 @@
 /*   By: rmdaba <rogerndaba@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 15:11:02 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/27 17:12:21 by rmdaba           ###   ########.fr       */
+/*   Updated: 2019/08/28 10:55:16 by rmdaba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,5 +182,4 @@ int main(void) {
     test_ft_puts();
 
     // printf("------->%d -- %d\n", ft_atoi("\t\r\f\v 2147483648"), atoi("444tf"));
-    printf("-----> %d\n", ft_numlen(999));
 }

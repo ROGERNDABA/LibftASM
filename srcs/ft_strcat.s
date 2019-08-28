@@ -4,10 +4,12 @@
 ;----------------------------;
 
 global _ft_strcat
+global ft_strcat
 
 section .text
 
 _ft_strcat:
+ft_strcat:
 	push	rbp
 	mov		rbp, rsp
 	push	rdi

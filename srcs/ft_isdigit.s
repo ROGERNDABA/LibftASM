@@ -4,10 +4,12 @@
 ;----------------------------;
 
 global _ft_isdigit
+global ft_isdigit
 
 section .text
 
 _ft_isdigit:
+ft_isdigit:
 	cmp		rdi, 0x2F
 	jg		digit_check
 	jmp		end

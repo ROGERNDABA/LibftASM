@@ -4,6 +4,7 @@
 ;----------------------------;
 
 global _ft_strdup
+global ft_strdup
 
 extern	_ft_strlen
 extern	_malloc
@@ -14,6 +15,7 @@ section .text
 
 ALIGN 16
 _ft_strdup:
+ft_strdup:
 	push	rbp
 	mov		rbp, rsp
 	push	rdi

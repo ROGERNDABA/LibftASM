@@ -4,10 +4,12 @@
 ;----------------------------;
 
 global _ft_memcpy
+global ft_memcpy
 
 section .text
 
 _ft_memcpy:
+ft_memcpy:
 	push	rbp
 	mov		rbp, rsp
 	mov		r10, rdi

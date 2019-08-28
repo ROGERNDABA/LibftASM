@@ -4,12 +4,14 @@
 ;----------------------------;
 
 global _ft_toupper
+global ft_toupper
 
 extern _ft_isalpha
 
 section .text
 
 _ft_toupper:
+ft_toupper:
 	call	_ft_isalpha
 	cmp		rax, 0x1
 	je		change_case

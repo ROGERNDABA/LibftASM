@@ -4,12 +4,14 @@
 ;----------------------------;
 
 global _ft_tolower
+global ft_tolower
 
 extern _ft_isalpha
 
 section .text
 
 _ft_tolower:
+ft_tolower:
 	call	_ft_isalpha
 	cmp		rax, 0x1
 	je		change_case

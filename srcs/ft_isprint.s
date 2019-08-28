@@ -4,10 +4,12 @@
 ;----------------------------;
 
 global _ft_isprint
+global ft_isprint
 
 section .text
 
 _ft_isprint:
+ft_isprint:
 	cmp		rdi, 0x20
 	jl		non_printable
 	cmp		rdi, 0x7E

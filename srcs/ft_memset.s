@@ -4,10 +4,12 @@
 ;----------------------------;
 
 global _ft_memset
+global ft_memset
 
 section .text
 
 _ft_memset:
+ft_memset:
 	push	rbp
 	mov		rbp, rsp
 	mov		rbx, rdi

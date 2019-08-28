@@ -7,6 +7,7 @@
 %define STDOUT 1
 
 global _ft_puts
+global ft_puts
 
 extern _ft_strlen
 
@@ -18,6 +19,7 @@ section .data
 section .text
 
 _ft_puts:
+ft_puts:
 	cmp		rdi, 0x0
 	je		end
 	push	rdi

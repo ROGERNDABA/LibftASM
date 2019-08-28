@@ -4,6 +4,7 @@
 ;----------------------------;
 
 global _ft_isalnum
+global ft_isalnum
 
 extern _ft_isdigit
 extern _ft_isalpha
@@ -11,6 +12,7 @@ extern _ft_isalpha
 section	.text
 
 _ft_isalnum:
+ft_isalnum:
 	call	_ft_isdigit
 	cmp		rax, 0x1
 	je		end

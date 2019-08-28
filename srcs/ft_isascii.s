@@ -4,10 +4,12 @@
 ;----------------------------;
 
 global _ft_isascii
+global ft_isascii
 
 section .text
 
 _ft_isascii:
+ft_isascii:
 	cmp		rdi, 0x0
 	jge		isascii
 	mov		rax, 0x0

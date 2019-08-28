@@ -4,10 +4,12 @@
 ;----------------------------;
 
 global _ft_isalpha
+global ft_isalpha
 
 section .text
 
 _ft_isalpha:
+ft_isalpha:
 	cmp		rdi, 0x40
 	jg		upper_check
 	cmp		rdi, 0x60

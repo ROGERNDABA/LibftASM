@@ -29,10 +29,17 @@ ft_atoi_ws:
 	je		ft_atoi_ws
 	cmp		rsi, 0x2d
 	je		negative
+	cmp		rsi, 0x2b
+	je		positive
 	jmp		convert
 
 negative:
 	mov		r10, -1
+	movzx	rsi, byte [rdi]
+	inc		rdi
+	jmp		convert
+
+positive:
 	movzx	rsi, byte [rdi]
 	inc		rdi
 	jmp		convert

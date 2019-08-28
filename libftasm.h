@@ -6,7 +6,7 @@
 /*   By: rmdaba <rogerndaba@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 12:14:45 by Roger Ndaba       #+#    #+#             */
-/*   Updated: 2019/08/28 10:55:05 by rmdaba           ###   ########.fr       */
+/*   Updated: 2019/08/28 11:01:25 by rmdaba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,5 @@ void	ft_cat(int fd);
 // BONUSES
 int		ft_atoi(char *s);
 char	*ft_itoa(int n);
-
+char	*ft_strchr(const char *s, int c);
 #endif //LIBFTASM_H

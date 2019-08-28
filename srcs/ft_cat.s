@@ -9,10 +9,12 @@
 %define SYS_WRITE 0x2000004
 
 global	_ft_cat
+global	ft_cat
 
 section	.text
 
 _ft_cat:
+ft_cat:
 	cmp		rdi, 0
 	jl		end
 	mov		r8, rdi

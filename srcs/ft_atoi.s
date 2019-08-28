@@ -5,10 +5,12 @@
 ;----------------------------;
 
 global	_ft_atoi
+global	ft_atoi
 
 section .text
 
 _ft_atoi:
+ft_atoi:
 	mov		rax, 0
 	mov		r10, 1
 

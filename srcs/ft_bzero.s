@@ -4,10 +4,12 @@
 ;----------------------------;
 
 global _ft_bzero
+global ft_bzero
 
 section .text
 
 _ft_bzero:
+ft_bzero:
 	cmp rsi, 0
 	je end
 	mov byte[rdi], 0

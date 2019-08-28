@@ -5,10 +5,12 @@
 ;----------------------------;
 
 global	_ft_strchr
+global	ft_strchr
 
 section .text
 
 _ft_strchr:
+ft_strchr:
 	push	rbp
 	mov		rbp, rsp
 	push	rdi

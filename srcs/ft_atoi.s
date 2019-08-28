@@ -25,6 +25,8 @@ ft_atoi_ws:
 	je		ft_atoi_ws
 	cmp		rsi, 0x0b
 	je		ft_atoi_ws
+	cmp		rsi, 0x0a
+	je		ft_atoi_ws
 	cmp		rsi, 0x0c
 	je		ft_atoi_ws
 	cmp		rsi, 0x2d

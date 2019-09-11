@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gcc object_t.c main.c obj/*.o
+gcc -Wall -Wextra -Werror object_t.c main.c obj/*.o
